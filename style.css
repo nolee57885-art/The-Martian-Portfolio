@@ -156,35 +156,54 @@ a {
   overflow: visible;
 }
 
+.bow-art {
+  display: block;
+  width: min(78vw, 34rem);
+  max-height: 58svh;
+  overflow: visible;
+}
 
 .bow-art__shape {
   transform: translateX(var(--bow-bend, 0px));
 }
 
+.bow-art__limb {
+  transition: none;
+}
+
 .bow-art__string {
-  transform: translateX(calc(var(--bow-shift, 0px) * -1));
+  transition: none;
+}
+
+.bow-art__string--top {
+  transform-origin: 365px 65px;
+  transform:
+    translate(
+      calc(var(--bow-shift, 0px) * -1),
+      calc(var(--bow-shift, 0px) * 0.15)
+    );
+}
+
+.bow-art__string--bottom {
+  transform-origin: 365px 435px;
+  transform:
+    translate(
+      calc(var(--bow-shift, 0px) * -1),
+      calc(var(--bow-shift, 0px) * -0.15)
+    );
 }
 
 .bow-art__arrow {
   transform: translateX(calc(var(--bow-shift, 0px) * -1));
-
-}
-
-.bow-section__caption {
-  margin: 1.5rem 0 0;
-  color: var(--colour-dusty-pink);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 @media (max-width: 600px) {
   .bow-art {
-    width: 115%;
-    max-width: none;
+    width: min(90vw, 30rem);
+    max-height: 52svh;
   }
+}
+
 
   .bow-section__caption {
     font-size: 0.68rem;
