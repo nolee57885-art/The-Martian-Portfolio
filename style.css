@@ -120,6 +120,92 @@ a {
 
 @media (prefers-reduced-motion: reduce) {
   html {
+
+     
+/* BOW AND ARROW — SCROLL SECTION */
+
+.bow-section {
+  position: relative;
+  height: 220vh;
+  background:
+    radial-gradient(
+      ellipse at 50% 45%,
+      rgba(59, 18, 27, 0.35),
+      transparent 65%
+    ),
+    var(--colour-black);
+}
+
+.bow-section__stage {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100svh;
+  padding: 2rem var(--page-padding);
+  overflow: hidden;
+}
+
+.bow-art {
+  display: block;
+  width: min(100%, 42rem);
+  max-height: 68svh;
+  overflow: visible;
+}
+
+.bow-art__shape {
+  transform-origin: 365px 250px;
+  transform: translateX(calc(var(--bow-progress, 0) * 12px));
+}
+
+.bow-art__limb {
+  transition: stroke 0.2s ease;
+}
+
+.bow-art__string {
+  transform-origin: 365px 250px;
+  transform:
+    translateX(calc(var(--bow-progress, 0) * -55px))
+    scaleX(calc(1 - var(--bow-progress, 0) * 0.18));
+}
+
+.bow-art__arrow {
+  transform: translateX(calc(var(--bow-progress, 0) * -55px));
+}
+
+.bow-section__caption {
+  margin: 1.5rem 0 0;
+  color: var(--colour-dusty-pink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .bow-art {
+    width: 115%;
+    max-width: none;
+  }
+
+  .bow-section__caption {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bow-art__limb,
+  .bow-art__string,
+  .bow-art__arrow {
+    transition: none;
+  }
+}
+
     scroll-behavior: auto;
   }
 }
