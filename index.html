@@ -1,126 +1,217 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#120D10">
-  <title>The Martian's Pursuits | Prerna Advani</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <header class="intro" id="intro">
-    <p class="intro__byline">Prerna Advani · Professional Portfolio</p>
+:root {
+  --colour-black: #120D10;
+  --colour-burgundy: #3B121B;
+  --colour-crimson: #A12E43;
+  --colour-dusty-pink: #E0B9C0;
+  --colour-soft-blush: #FFF1F3;
+  --page-padding: clamp(1.25rem, 6vw, 6rem);
+}
 
-    <h1>The Martian's Pursuits</h1>
+* {
+  box-sizing: border-box;
+}
 
-    <div class="intro__copy">
-      <p>
-        Mars is often cast as Earth's unruly red child — fierce,
-        formidable, and brimming with boundless energy. It embodies
-        the will to persevere: to rise after failure, to keep pushing
-        when the work is difficult, and to carry on when the path ahead
-        is uncertain.
-      </p>
+html {
+  scroll-behavior: smooth;
+  background: var(--colour-black);
+}
 
-      <p>
-        Energy, however immense, finds its purpose in direction.
-        Guided by intent, it can build, create, and transform.
-      </p>
+body {
+  margin: 0;
+  background: var(--colour-black);
+  color: var(--colour-soft-blush);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
+}
 
-      <p class="intro__statement">
-        The Martian's Pursuits is me stepping into my energy
-        and giving it flow.
-      </p>
-    </div>
-  </header>
+.intro,
+.armour-intro {
+  padding: clamp(5rem, 12vh, 9rem) var(--page-padding);
+}
 
-  <main>
-    <section
-      class="bow-section"
-      data-bow-section
-      id="bow"
-      aria-label="A bow drawing to full tension as you scroll"
-    >
-      <div class="bow-section__stage">
-        
-<svg
-  class="bow-art"
-  viewBox="0 0 600 500"
-  role="img"
-  aria-labelledby="bow-title bow-description"
->
-  <title id="bow-title">The bow and arrow</title>
-  <desc id="bow-description">
-    A stylised bow and arrow. As you scroll, the arrow draws back
-    and the bowstring forms a V. The arrow is never released.
-  </desc>
+.intro {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-  <defs>
-    <linearGradient id="bow-gradient" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#3B121B"/>
-      <stop offset="50%" stop-color="#A12E43"/>
-      <stop offset="100%" stop-color="#E0B9C0"/>
-    </linearGradient>
-  </defs>
+.intro__byline,
+.section-eyebrow {
+  color: var(--colour-dusty-pink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
 
-  <g class="bow-art__shape">
-    <path
-      class="bow-art__limb"
-      d="M 365 65 C 155 115, 155 385, 365 435"
-      fill="none"
-      stroke="url(#bow-gradient)"
-      stroke-width="12"
-      stroke-linecap="round"
-    />
+.intro h1,
+.armour-intro h2 {
+  margin: 0;
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
 
-    <path
-      class="bow-art__string bow-art__string--top"
-      d="M 365 65 L 365 250"
-      fill="none"
-      stroke="#E0B9C0"
-      stroke-width="2"
-    />
+.intro h1 {
+  max-width: 12ch;
+  font-size: clamp(3.2rem, 9vw, 8rem);
+}
 
-    <path
-      class="bow-art__string bow-art__string--bottom"
-      d="M 365 250 L 365 435"
-      fill="none"
-      stroke="#E0B9C0"
-      stroke-width="2"
-    />
+.intro__copy {
+  max-width: 46rem;
+  margin-top: 3rem;
+  color: var(--colour-dusty-pink);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+}
 
-    <g class="bow-art__arrow">
-      <line
-        x1="365"
-        y1="250"
-        x2="90"
-        y2="250"
-        stroke="#FFF1F3"
-        stroke-width="3"
-        stroke-linecap="round"
-      />
-      <path
-        d="M 90 250 L 112 238 L 108 250 L 112 262 Z"
-        fill="#E0B9C0"
-      />
-      <path
-        d="M 338 250 L 353 238 L 353 262 Z"
-        fill="#A12E43"
-      />
-    </g>
-  </g>
-</svg>
+.intro__statement {
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--colour-crimson);
+  color: var(--colour-soft-blush);
+}
 
+.armour-intro {
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+  background:
+    radial-gradient(ellipse at 80% 30%, #3B121B 0%, transparent 55%),
+    var(--colour-black);
+}
 
-        <p class="bow-section__caption">
-          Energy finds its direction.
-        </p>
-      </div>
-    </section>
+.armour-intro h2 {
+  font-size: clamp(3rem, 8vw, 7rem);
+}
 
-    <!-- The anatomical armour section will follow. -->
-  </main>
-</body>
-</html>
+.armour-intro__description {
+  max-width: 40rem;
+  color: var(--colour-dusty-pink);
+  font-size: 1.1rem;
+}
+
+.armour-intro__instruction {
+  margin-top: 2rem;
+  color: var(--colour-crimson);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.armour-map {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  padding: 2rem var(--page-padding) 7rem;
+  align-items: center;
+}
+
+.armour-map__figure {
+  min-height: 34rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(224, 185, 192, 0.2);
+  background: linear-gradient(145deg, #3B121B, #120D10 70%);
+}
+
+.armour-map__art {
+  width: 100%;
+  min-height: 34rem;
+  display: grid;
+  place-items: center;
+}
+
+.armour-map__art-note {
+  color: var(--colour-dusty-pink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.armour-map__topics {
+  display: flex;
+  flex-direction: column;
+}
+
+.armour-topic {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0.15rem 1rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid rgba(224, 185, 192, 0.2);
+  color: var(--colour-soft-blush);
+  text-decoration: none;
+}
+
+.armour-topic__number {
+  grid-row: span 2;
+  color: var(--colour-crimson);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+}
+
+.armour-topic__title {
+  font-size: 1.25rem;
+}
+
+.armour-topic__summary {
+  color: var(--colour-dusty-pink);
+  font-size: 0.9rem;
+}
+
+.armour-topic:hover .armour-topic__title,
+.armour-topic:focus-visible .armour-topic__title {
+  color: var(--colour-dusty-pink);
+}
+
+.armour-topic:focus-visible {
+  outline: 2px solid var(--colour-dusty-pink);
+  outline-offset: 4px;
+}
+
+.armour-details {
+  padding: 2rem var(--page-padding) 6rem;
+  background: var(--colour-burgundy);
+}
+
+.armour-detail {
+  max-width: 48rem;
+  padding: 4rem 0;
+  border-bottom: 1px solid rgba(255, 241, 243, 0.2);
+  scroll-margin-top: 2rem;
+}
+
+.armour-detail h2 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.armour-detail > p:last-child {
+  max-width: 40rem;
+  color: var(--colour-dusty-pink);
+}
+
+@media (max-width: 760px) {
+  .armour-map {
+    grid-template-columns: 1fr;
+  }
+
+  .armour-map__figure,
+  .armour-map__art {
+    min-height: 25rem;
+  }
+
+  .intro h1 {
+    font-size: clamp(3rem, 14vw, 5rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
