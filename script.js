@@ -26,6 +26,17 @@
 
       section.style.setProperty("--bow-progress", progress.toFixed(3));
 
+      // Use pixel values for reliable CSS transforms.
+      section.style.setProperty(
+        "--bow-shift",
+        `${progress * 55}px`
+      );
+
+      section.style.setProperty(
+        "--bow-bend",
+        `${progress * 12}px`
+      );
+
       ticking = false;
     }
 
@@ -36,7 +47,10 @@
       window.requestAnimationFrame(updateAnimation);
     }
 
-    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("scroll", requestUpdate, {
+      passive: true
+    });
+
     window.addEventListener("resize", requestUpdate);
     reducedMotion.addEventListener("change", requestUpdate);
 
@@ -44,7 +58,10 @@
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initialiseBowAnimation);
+    document.addEventListener(
+      "DOMContentLoaded",
+      initialiseBowAnimation
+    );
   } else {
     initialiseBowAnimation();
   }
