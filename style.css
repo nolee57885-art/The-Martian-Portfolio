@@ -1,7 +1,6 @@
 
 /* THE MARTIAN'S PURSUITS
    Visual foundation
-   Palette approved by Prerna
 */
 
 :root {
@@ -102,26 +101,6 @@ a {
   font-size: clamp(1.15rem, 2vw, 1.55rem);
 }
 
-@media (max-width: 600px) {
-  .intro {
-    min-height: 100svh;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-
-  .intro h1 {
-    font-size: clamp(3rem, 14vw, 5rem);
-  }
-
-  .intro__copy {
-    margin-top: 2.5rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-
-     
 /* BOW AND ARROW — SCROLL SECTION */
 
 .bow-section {
@@ -147,7 +126,6 @@ a {
   height: 100svh;
   padding: 2rem var(--page-padding);
   overflow: hidden;
-
 }
 
 .bow-art {
@@ -161,43 +139,58 @@ a {
   transform: translateX(var(--bow-bend, 0px));
 }
 
-.bow-art__limb {
-  transition: none;
-}
-
+.bow-art__limb,
 .bow-art__string {
   transition: none;
 }
 
 .bow-art__string--top {
-  transform-origin: 365px 65px;
-  transform:
-    translate(
-      calc(var(--bow-shift, 0px) * -1),
-      calc(var(--bow-shift, 0px) * 0.15)
-    );
+  transform: translate(
+    calc(var(--bow-shift, 0px) * -1),
+    calc(var(--bow-shift, 0px) * 0.15)
+  );
 }
 
 .bow-art__string--bottom {
-  transform-origin: 365px 435px;
-  transform:
-    translate(
-      calc(var(--bow-shift, 0px) * -1),
-      calc(var(--bow-shift, 0px) * -0.15)
-    );
+  transform: translate(
+    calc(var(--bow-shift, 0px) * -1),
+    calc(var(--bow-shift, 0px) * -0.15)
+  );
 }
 
 .bow-art__arrow {
   transform: translateX(calc(var(--bow-shift, 0px) * -1));
 }
 
+.bow-section__caption {
+  margin: 1.5rem 0 0;
+  color: var(--colour-dusty-pink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 @media (max-width: 600px) {
+  .intro {
+    min-height: 100svh;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .intro h1 {
+    font-size: clamp(3rem, 14vw, 5rem);
+  }
+
+  .intro__copy {
+    margin-top: 2.5rem;
+  }
+
   .bow-art {
     width: min(90vw, 30rem);
     max-height: 52svh;
   }
-}
-
 
   .bow-section__caption {
     font-size: 0.68rem;
@@ -206,13 +199,13 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .bow-art__limb,
   .bow-art__string,
   .bow-art__arrow {
     transition: none;
-  }
-}
-
-    scroll-behavior: auto;
   }
 }
