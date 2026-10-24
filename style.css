@@ -156,24 +156,18 @@ a {
   overflow: visible;
 }
 
-.bow-art__shape {
-  transform-origin: 365px 250px;
-  transform: translateX(calc(var(--bow-progress, 0) * 12px));
-}
 
-.bow-art__limb {
-  transition: stroke 0.2s ease;
+.bow-art__shape {
+  transform: translateX(var(--bow-bend, 0px));
 }
 
 .bow-art__string {
-  transform-origin: 365px 250px;
-  transform:
-    translateX(calc(var(--bow-progress, 0) * -55px))
-    scaleX(calc(1 - var(--bow-progress, 0) * 0.18));
+  transform: translateX(calc(var(--bow-shift, 0px) * -1));
 }
 
 .bow-art__arrow {
-  transform: translateX(calc(var(--bow-progress, 0) * -55px));
+  transform: translateX(calc(var(--bow-shift, 0px) * -1));
+
 }
 
 .bow-section__caption {
