@@ -1,4 +1,3 @@
-
 /* THE MARTIAN'S PURSUITS
    Visual foundation
 */
@@ -35,6 +34,8 @@ body {
 a {
   color: inherit;
 }
+
+/* INTRODUCTION */
 
 .intro {
   position: relative;
@@ -101,76 +102,144 @@ a {
   font-size: clamp(1.15rem, 2vw, 1.55rem);
 }
 
-/* BOW AND ARROW — SCROLL SECTION */
+/* ARMOUR SECTION INTRODUCTION */
 
-.bow-section {
-  position: relative;
-  height: 220vh;
+.armour-intro {
+  padding: 7rem var(--page-padding) 3rem;
   background:
     radial-gradient(
-      ellipse at 50% 45%,
-      rgba(59, 18, 27, 0.35),
-      transparent 65%
+      ellipse at 80% 30%,
+      var(--colour-burgundy) 0%,
+      transparent 55%
     ),
     var(--colour-black);
 }
 
-.bow-section__stage {
-  position: sticky;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100svh;
-  padding: 2rem var(--page-padding);
-  overflow: hidden;
-}
-
-.bow-art {
-  display: block;
-  width: min(78vw, 34rem);
-  max-height: 58svh;
-  overflow: visible;
-}
-
-.bow-art__shape {
-  transform: translateX(var(--bow-bend, 0px));
-}
-
-.bow-art__limb,
-.bow-art__string {
-  transition: none;
-}
-
-.bow-art__string--top {
-  transform: translate(
-    calc(var(--bow-shift, 0px) * -1),
-    calc(var(--bow-shift, 0px) * 0.15)
-  );
-}
-
-.bow-art__string--bottom {
-  transform: translate(
-    calc(var(--bow-shift, 0px) * -1),
-    calc(var(--bow-shift, 0px) * -0.15)
-  );
-}
-
-.bow-art__arrow {
-  transform: translateX(calc(var(--bow-shift, 0px) * -1));
-}
-
-.bow-section__caption {
-  margin: 1.5rem 0 0;
+.section-eyebrow {
+  margin: 0 0 1rem;
   color: var(--colour-dusty-pink);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-align: center;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
+
+.armour-intro h2 {
+  max-width: 12ch;
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+  text-wrap: balance;
+}
+
+.armour-intro__description {
+  max-width: 40rem;
+  color: var(--colour-dusty-pink);
+  font-size: 1.1rem;
+}
+
+.armour-intro__instruction {
+  margin-top: 2rem;
+  color: var(--colour-crimson);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* PORTFOLIO TOPIC LINKS */
+
+.armour-map {
+  padding: 1rem var(--page-padding) 7rem;
+  background: var(--colour-black);
+}
+
+.armour-map__topics {
+  display: flex;
+  flex-direction: column;
+  max-width: 58rem;
+}
+
+.armour-topic {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  gap: 0.15rem 1rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid rgba(224, 185, 192, 0.2);
+  color: var(--colour-soft-blush);
+  text-decoration: none;
+  transition: border-color 180ms ease;
+}
+
+.armour-topic__number {
+  grid-row: span 2;
+  color: var(--colour-crimson);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+}
+
+.armour-topic__title {
+  font-size: 1.25rem;
+  transition: color 180ms ease;
+}
+
+.armour-topic__summary {
+  color: var(--colour-dusty-pink);
+  font-size: 0.9rem;
+}
+
+.armour-topic:hover,
+.armour-topic:focus-visible {
+  border-color: var(--colour-dusty-pink);
+}
+
+.armour-topic:hover .armour-topic__title,
+.armour-topic:focus-visible .armour-topic__title {
+  color: var(--colour-dusty-pink);
+}
+
+.armour-topic:focus-visible {
+  outline: 2px solid var(--colour-dusty-pink);
+  outline-offset: 4px;
+}
+
+/* DETAIL SECTIONS */
+
+.armour-details {
+  padding: 2rem var(--page-padding) 6rem;
+  background:
+    linear-gradient(
+      180deg,
+      var(--colour-burgundy),
+      var(--colour-black)
+    );
+}
+
+.armour-detail {
+  max-width: 48rem;
+  padding: 4rem 0;
+  border-bottom: 1px solid rgba(255, 241, 243, 0.2);
+  scroll-margin-top: 2rem;
+}
+
+.armour-detail h2 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.armour-detail > p:last-child {
+  max-width: 40rem;
+  color: var(--colour-dusty-pink);
+  font-size: 1rem;
+}
+
+/* MOBILE LAYOUT */
 
 @media (max-width: 600px) {
   .intro {
@@ -187,25 +256,37 @@ a {
     margin-top: 2.5rem;
   }
 
-  .bow-art {
-    width: min(90vw, 30rem);
-    max-height: 52svh;
+  .armour-intro {
+    padding-top: 5rem;
   }
 
-  .bow-section__caption {
-    font-size: 0.68rem;
-    letter-spacing: 0.12em;
+  .armour-topic {
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 0.2rem 0.75rem;
+    padding: 1.2rem 0;
+  }
+
+  .armour-topic__title {
+    font-size: 1.1rem;
+  }
+
+  .armour-detail {
+    padding: 3rem 0;
   }
 }
+
+/* ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
-  .bow-art__limb,
-  .bow-art__string,
-  .bow-art__arrow {
-    transition: none;
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
