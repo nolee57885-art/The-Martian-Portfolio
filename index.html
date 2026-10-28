@@ -56,45 +56,108 @@
       </div>
       <div class="armour-layout">
         <div class="armour-figure">
-          <svg class="armour-art" viewBox="0 0 520 680" role="img" aria-labelledby="armour-svg-title armour-svg-desc">
-            <title id="armour-svg-title">The Martian's armour</title>
-            <desc id="armour-svg-desc">A stylised, human-shaped figure wearing interlocking burgundy and crimson armour plates, with an exposed neck and flowing mane-like lines.</desc>
+          <svg class="armour-art" viewBox="0 0 600 760" role="img" aria-labelledby="armour-svg-title armour-svg-desc">
+            <title id="armour-svg-title">The Martian's armour — a layered warrior figure</title>
+            <desc id="armour-svg-desc">A feminine, athletic warrior silhouette with a human face, flowing mane-like hair, exposed neck, broad shoulders, layered burgundy and crimson armour, articulated hands, a strong core, and plated legs. Fine callouts connect the figure to clinical practice, learning, fitness, and experience.</desc>
             <defs>
-              <linearGradient id="plate" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A12E43"/><stop offset="1" stop-color="#3B121B"/></linearGradient>
-              <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF1F3"/><stop offset="1" stop-color="#A12E43"/></linearGradient>
+              <linearGradient id="armour-metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#E0B9C0"/><stop offset=".22" stop-color="#A12E43"/><stop offset=".55" stop-color="#4A1722"/><stop offset=".78" stop-color="#190E12"/><stop offset="1" stop-color="#A12E43"/></linearGradient>
+              <linearGradient id="armour-skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F0C9B5"/><stop offset=".48" stop-color="#B97665"/><stop offset="1" stop-color="#54232B"/></linearGradient>
+              <linearGradient id="armour-cloth" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#A12E43"/><stop offset="1" stop-color="#210D14"/></linearGradient>
+              <radialGradient id="armour-aura"><stop stop-color="#A12E43" stop-opacity=".36"/><stop offset="1" stop-color="#120D10" stop-opacity="0"/></radialGradient>
+              <filter id="armour-shadow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="8"/></filter>
             </defs>
-            <ellipse cx="260" cy="640" rx="150" ry="14" fill="#A12E43" opacity=".16"/>
-            <g class="mane-lines" fill="none" stroke="#E0B9C0" stroke-width="2" opacity=".55" stroke-linecap="round">
-              <path d="M215 66 C145 102 176 151 126 190 C96 215 120 251 154 264"/>
-              <path d="M224 72 C178 112 205 153 162 193 C139 218 156 246 175 256"/>
-              <path d="M304 66 C375 105 342 150 394 188 C425 216 399 248 366 264"/>
-              <path d="M296 72 C342 112 314 153 356 193 C380 217 363 245 344 256"/>
-              <path d="M208 105 C190 148 224 168 204 198"/><path d="M312 105 C330 148 296 168 316 198"/>
+            <ellipse cx="300" cy="372" rx="224" ry="330" fill="url(#armour-aura)"/>
+            <circle cx="300" cy="130" r="86" fill="#A12E43" opacity=".18"/>
+            <circle cx="300" cy="130" r="72" fill="none" stroke="#E0B9C0" stroke-opacity=".24"/>
+            <ellipse cx="300" cy="731" rx="135" ry="12" fill="#A12E43" opacity=".26" filter="url(#armour-shadow)"/>
+            <!-- Wind-carved mane: individual strands, never animal features -->
+            <g fill="none" stroke-linecap="round">
+              <path d="M270 105 C205 57 197 137 156 157 S116 242 176 285 S153 345 132 385" stroke="#3B121B" stroke-width="27"/>
+              <path d="M278 98 C217 48 220 128 178 150 S143 229 185 272" stroke="#A12E43" stroke-width="13"/>
+              <path d="M267 115 C225 89 239 154 197 177 S171 244 204 276" stroke="#E0B9C0" stroke-width="2" opacity=".8"/>
+              <path d="M326 100 C387 45 405 122 444 157 S477 231 425 282 S451 338 468 385" stroke="#210D14" stroke-width="29"/>
+              <path d="M329 103 C384 66 388 133 429 154 S456 228 416 270" stroke="#A12E43" stroke-width="13"/>
+              <path d="M336 119 C373 85 370 151 411 176 S428 239 396 278" stroke="#E0B9C0" stroke-width="2" opacity=".8"/>
+              <path d="M246 104 C220 151 251 175 230 205 M351 108 C377 151 346 175 368 204" stroke="#D38B92" stroke-width="3"/>
+              <path d="M250 92 C202 112 220 191 190 212 M351 89 C399 110 380 190 411 212" stroke="#5A202C" stroke-width="7"/>
             </g>
-            <path d="M218 63 Q260 37 302 63 L316 103 L298 131 L222 131 L204 103Z" fill="url(#plate)" stroke="#E0B9C0" stroke-width="1.5"/>
-            <path d="M226 77 Q260 92 294 77 L286 111 Q260 127 234 111Z" fill="#120D10" stroke="#A12E43"/>
-            <path d="M235 132 L285 132 L294 183 L226 183Z" fill="#3B121B" stroke="#E0B9C0" stroke-width="1.5"/>
-            <path d="M225 176 Q190 155 160 178 L128 224 L155 264 L198 245 L224 210Z" fill="url(#plate)" stroke="#E0B9C0" stroke-width="2"/>
-            <path d="M295 176 Q330 155 360 178 L392 224 L365 264 L322 245 L296 210Z" fill="url(#plate)" stroke="#E0B9C0" stroke-width="2"/>
-            <path d="M153 186 L178 196 L165 235 L144 227Z M367 186 L342 196 L355 235 L376 227Z" fill="#A12E43" stroke="#E0B9C0"/>
-            <path d="M222 183 L298 183 L320 254 L290 294 L230 294 L200 254Z" fill="url(#plate)" stroke="#E0B9C0" stroke-width="2"/>
-            <path d="M238 197 L282 197 L291 247 L260 268 L229 247Z" fill="#120D10" stroke="#A12E43" stroke-width="2"/>
-            <path d="M229 295 L291 295 L306 354 L286 410 L234 410 L214 354Z" fill="url(#plate)" stroke="#E0B9C0" stroke-width="2"/>
-            <path d="M238 307 L282 307 L291 350 L260 372 L229 350Z" fill="#3B121B" stroke="#A12E43" stroke-width="2"/>
-            <path d="M213 355 L235 365 L227 408 L211 405 L195 377Z M307 355 L285 365 L293 408 L309 405 L325 377Z" fill="#A12E43" stroke="#E0B9C0"/>
-            <path d="M211 405 L255 411 L248 488 L222 510 L196 490Z" fill="url(#plate)" stroke="#E0B9C0" stroke-width="2"/>
-            <path d="M309 405 L265 411 L272 488 L298 510 L324 490Z" fill="url(#plate)" stroke="#E0B9C0" stroke-width="2"/>
-            <path d="M196 490 L222 510 L217 555 L189 561 L177 540Z M324 490 L298 510 L303 555 L331 561 L343 540Z" fill="#3B121B" stroke="#E0B9C0" stroke-width="2"/>
-            <path d="M189 561 L217 555 L225 615 L190 622 L175 605Z M331 561 L303 555 L295 615 L330 622 L345 605Z" fill="url(#plate)" stroke="#E0B9C0" stroke-width="2"/>
-            <path d="M170 622 L225 615 L230 634 L166 634Z M350 622 L295 615 L290 634 L354 634Z" fill="#A12E43" stroke="#E0B9C0"/>
-            <g fill="#FFF1F3" font-family="Arial, sans-serif" font-size="10" letter-spacing="2">
-              <text x="24" y="302">HANDS-ON</text><path d="M96 296 L137 254" stroke="#E0B9C0" fill="none"/>
-              <text x="350" y="310">FITNESS</text><path d="M348 315 L300 334" stroke="#E0B9C0" fill="none"/>
-              <text x="22" y="430">FOUNDATION</text><path d="M113 425 L204 448" stroke="#E0B9C0" fill="none"/>
-              <text x="351" y="139">LEARNING</text><path d="M350 145 L294 153" stroke="#E0B9C0" fill="none"/>
+            <!-- Cape, behind the body -->
+            <path d="M239 235 C198 258 177 339 166 433 L78 592 Q181 559 252 473 L300 330Z" fill="url(#armour-cloth)" opacity=".9"/>
+            <path d="M359 235 C402 258 424 339 436 433 L522 592 Q418 559 348 473 L300 330Z" fill="url(#armour-cloth)" opacity=".9"/>
+            <path d="M226 271 Q163 410 117 557 M374 271 Q437 410 483 557" fill="none" stroke="#E0B9C0" stroke-opacity=".28" stroke-width="2"/>
+            <!-- Face: human, composed, slightly androgynous -->
+            <path d="M267 88 Q300 67 333 88 L337 126 Q331 157 300 169 Q269 157 263 126Z" fill="url(#armour-skin)" stroke="#E0B9C0" stroke-width="1.5"/>
+            <path d="M266 111 Q279 102 290 112 M310 112 Q322 102 334 111" fill="none" stroke="#54232B" stroke-width="3" stroke-linecap="round"/>
+            <path d="M269 108 L288 107 M312 107 L331 108" stroke="#190E12" stroke-width="4" stroke-linecap="round"/>
+            <path d="M300 112 L294 131 L302 134" fill="none" stroke="#7A403D" stroke-width="2" stroke-linecap="round"/>
+            <path d="M287 145 Q300 150 313 145" fill="none" stroke="#54232B" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M258 98 Q300 45 342 98 L333 111 Q300 92 267 111Z" fill="url(#armour-metal)" stroke="#E0B9C0" stroke-width="1.5"/>
+            <path d="M300 59 L300 92 M282 70 L291 91 M318 70 L309 91" stroke="#FFF1F3" stroke-opacity=".6" stroke-width="1.5"/>
+            <!-- Exposed neck: deliberately unarmoured -->
+            <path d="M282 158 L282 203 Q300 218 318 203 L318 158" fill="url(#armour-skin)"/>
+            <path d="M283 180 Q300 192 317 180" fill="none" stroke="#54232B" stroke-opacity=".6" stroke-width="2"/>
+            <!-- Strong shoulders and upper arms -->
+            <path d="M278 198 Q246 181 215 199 L178 231 Q170 253 194 273 L231 251 L260 236Z" fill="url(#armour-skin)" stroke="#7A403D" stroke-width="2"/>
+            <path d="M322 198 Q354 181 385 199 L422 231 Q430 253 406 273 L369 251 L340 236Z" fill="url(#armour-skin)" stroke="#7A403D" stroke-width="2"/>
+            <!-- Layered shoulder pauldrons -->
+            <path d="M273 205 Q237 180 205 202 L178 231 L196 248 L226 229 L251 242 L282 226Z" fill="url(#armour-metal)" stroke="#E0B9C0" stroke-width="2"/>
+            <path d="M327 205 Q363 180 395 202 L422 231 L404 248 L374 229 L349 242 L318 226Z" fill="url(#armour-metal)" stroke="#E0B9C0" stroke-width="2"/>
+            <path d="M204 207 L226 216 L214 237 M396 207 L374 216 L386 237" fill="none" stroke="#FFF1F3" stroke-opacity=".72" stroke-width="2"/>
+            <path d="M184 234 L205 246 L220 238 M416 234 L395 246 L380 238" fill="none" stroke="#5B1B29" stroke-width="4"/>
+            <!-- Torso and articulated chest plates -->
+            <path d="M259 218 Q239 235 238 274 L247 325 L275 348 L300 337 L325 348 L353 325 L362 274 Q361 235 341 218 L322 229 L300 239 L278 229Z" fill="url(#armour-skin)" stroke="#54232B" stroke-width="2"/>
+            <path d="M251 229 Q271 214 295 235 L291 276 Q272 291 250 273Z" fill="url(#armour-metal)" stroke="#E0B9C0" stroke-width="2"/>
+            <path d="M349 229 Q329 214 305 235 L309 276 Q328 291 350 273Z" fill="url(#armour-metal)" stroke="#E0B9C0" stroke-width="2"/>
+            <path d="M260 237 Q273 228 286 240 M340 237 Q327 228 314 240" fill="none" stroke="#FFF1F3" stroke-opacity=".7" stroke-width="2"/>
+            <path d="M300 240 L300 325 M272 293 L288 310 M328 293 L312 310" fill="none" stroke="#E0B9C0" stroke-opacity=".65" stroke-width="2"/>
+            <path d="M243 277 L264 289 L281 320 L300 333 L319 320 L336 289 L357 277 L348 320 L325 346 L300 355 L275 346 L252 320Z" fill="url(#armour-metal)" stroke="#E0B9C0" stroke-width="2"/>
+            <!-- Core: segmented plates with visible vulnerable centre -->
+            <path d="M263 347 L337 347 L345 397 L327 431 L273 431 L255 397Z" fill="url(#armour-skin)" stroke="#54232B" stroke-width="2"/>
+            <path d="M260 351 L282 357 L278 378 L257 375Z M340 351 L318 357 L322 378 L343 375Z" fill="url(#armour-metal)" stroke="#E0B9C0" stroke-width="1.5"/>
+            <path d="M258 380 L281 384 L280 404 L260 401Z M342 380 L319 384 L320 404 L340 401Z" fill="url(#armour-metal)" stroke="#E0B9C0" stroke-width="1.5"/>
+            <path d="M263 408 L284 412 L293 431 L273 431Z M337 408 L316 412 L307 431 L327 431Z" fill="url(#armour-metal)" stroke="#E0B9C0" stroke-width="1.5"/>
+            <path d="M296 359 L304 359 L306 370 L300 378 L294 370Z" fill="#120D10" stroke="#E0B9C0" stroke-width="1.5"/>
+            <!-- Forearms and articulated hands -->
+            <path d="M185 270 L211 281 L195 335 L173 366 L155 353 L169 310Z" fill="url(#armour-skin)" stroke="#54232B" stroke-width="2"/>
+            <path d="M415 270 L389 281 L405 335 L427 366 L445 353 L431 310Z" fill="url(#armour-skin)" stroke="#54232B" stroke-width="2"/>
+            <path d="M175 286 L205 296 L197 318 L166 309Z M425 286 L395 296 L403 318 L434 309Z" fill="url(#armour-metal)" stroke="#E0B9C0" stroke-width="2"/>
+            <path d="M166 313 L196 322 L185 345 L157 336Z M434 313 L404 322 L415 345 L443 336Z" fill="url(#armour-metal)" stroke="#E0B9C0" stroke-width="2"/>
+            <path d="M157 349 L179 358 L169 386 L156 382 L148 367Z M443 349 L421 358 L431 386 L444 382 L452 367Z" fill="url(#armour-skin)" stroke="#54232B" stroke-width="2"/>
+            <path d="M151 364 L159 367 L156 389 M163 368 L171 370 L166 392 M449 364 L441 367 L444 389 M437 368 L429 370 L434 392" fill="none" stroke="#E0B9C0" stroke-width="2" stroke-linecap="round"/>
+            <!-- Waist belt and layered tassets -->
+            <path d="M255 427 L345 427 L351 447 L300 459 L249 447Z" fill="url(#armour-metal)" stroke="#E0B9C0" stroke-width="2"/>
+            <path d="M289 430 L311 430 L313 447 L300 453 L287 447Z" fill="#120D10" stroke="#E0B9C0" stroke-width="2"/>
+            <path d="M254 447 L293 456 L286 500 L255 488Z M307 456 L346 447 L345 488 L314 500Z" fill="url(#armour-metal)" stroke="#E0B9C0" stroke-width="2"/>
+            <path d="M291 457 L309 457 L313 514 L300 525 L287 514Z" fill="url(#armour-cloth)" stroke="#E0B9C0" stroke-width="1.5"/>
+            <!-- Muscular thighs and segmented leg armour -->
+            <path d="M254 488 Q272 493 286 500 L279 557 L260 579 L239 561 L232 520Z" fill="url(#armour-skin)" stroke="#54232B" stroke-width="2"/>
+            <path d="M346 488 Q328 493 314 500 L321 557 L340 579 L361 561 L368 520Z" fill="url(#armour-skin)" stroke="#54232B" stroke-width="2"/>
+            <path d="M238 511 L270 516 L271 552 L254 569 L234 551Z M362 511 L330 516 L329 552 L346 569 L366 551Z" fill="url(#armour-metal)" stroke="#E0B9C0" stroke-width="2"/>
+            <path d="M244 521 L263 525 L260 548 M356 521 L337 525 L340 548" fill="none" stroke="#FFF1F3" stroke-opacity=".7" stroke-width="2"/>
+            <path d="M260 575 L280 567 L282 624 L260 648 L245 634Z M340 575 L320 567 L318 624 L340 648 L355 634Z" fill="url(#armour-skin)" stroke="#54232B" stroke-width="2"/>
+            <path d="M246 591 L276 586 L278 622 L260 640 L243 625Z M354 591 L324 586 L322 622 L340 640 L357 625Z" fill="url(#armour-metal)" stroke="#E0B9C0" stroke-width="2"/>
+            <path d="M250 645 L276 630 L280 660 L264 676 L240 670Z M350 645 L324 630 L320 660 L336 676 L360 670Z" fill="url(#armour-metal)" stroke="#E0B9C0" stroke-width="2"/>
+            <path d="M239 670 L270 671 L276 684 L228 684Z M361 670 L330 671 L324 684 L372 684Z" fill="#190E12" stroke="#E0B9C0" stroke-width="2"/>
+            <!-- Sparse engraved details, rivets, and light-catching edges -->
+            <g fill="#FFF1F3" opacity=".8"><circle cx="213" cy="222" r="3"/><circle cx="387" cy="222" r="3"/><circle cx="263" cy="246" r="2.5"/><circle cx="337" cy="246" r="2.5"/><circle cx="266" cy="366" r="2"/><circle cx="334" cy="366" r="2"/><circle cx="263" cy="438" r="2.5"/><circle cx="337" cy="438" r="2.5"/></g>
+            <g fill="none" stroke="#E0B9C0" stroke-width="1.3" opacity=".72">
+              <path d="M227 253 L244 267 L237 282 M373 253 L356 267 L363 282"/>
+              <path d="M270 323 L282 332 L300 338 L318 332 L330 323"/>
+              <path d="M272 476 L283 482 L300 485 L317 482 L328 476"/>
+            </g>
+            <!-- Fine callouts -->
+            <g fill="none" stroke="#E0B9C0" stroke-width="1.1" opacity=".85">
+              <path d="M255 124 L142 95 L64 95"/><circle cx="255" cy="124" r="3" fill="#E0B9C0"/>
+              <path d="M318 185 L437 166 L520 166"/><circle cx="318" cy="185" r="3" fill="#E0B9C0"/>
+              <path d="M203 222 L119 260 L48 260"/><circle cx="203" cy="222" r="3" fill="#E0B9C0"/>
+              <path d="M333 387 L448 405 L526 405"/><circle cx="333" cy="387" r="3" fill="#E0B9C0"/>
+              <path d="M344 544 L448 577 L526 577"/><circle cx="344" cy="544" r="3" fill="#E0B9C0"/>
+            </g>
+            <g fill="#FFF1F3" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.4">
+              <text x="24" y="83">FACE</text><text x="458" y="153">LEARNING</text><text x="24" y="247">HANDS-ON</text><text x="456" y="392">CORE</text><text x="456" y="564">FOUNDATION</text>
             </g>
           </svg>
-          <p class="figure-caption">A symbolic map — not a finished portrait.</p>
+          <p class="figure-caption">Strength is built in layers. Every plate carries a part of the story.</p>
         </div>
         <div class="armour-links" aria-label="Explore armour meanings">
           <a href="#learning"><span>01</span><span><strong>The exposed neck</strong><small>Study, curiosity, and continuing to learn</small></span><b>↗</b></a>
