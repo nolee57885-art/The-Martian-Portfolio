@@ -168,3 +168,18 @@ h1 em, h2 em { color: var(--pink); font-weight: 400; }
   .mars-panel-landscape { grid-column: 1 / -1; min-height: 320px; }
 }
 @media (prefers-reduced-motion: reduce) { .mars-panel, .mars-panel::before, .mars-panel::after { scroll-behavior: auto; } }
+
+
+/* Armour redesign: cinematic framing, engraved-metal finish, and responsive figure scale */
+.armour-figure { position: relative; overflow: hidden; isolation: isolate; border-color: rgba(224,185,192,.28); background: radial-gradient(ellipse at 50% 24%, rgba(161,46,67,.28), transparent 34%), radial-gradient(ellipse at 50% 70%, rgba(59,18,27,.68), transparent 68%), linear-gradient(155deg, #170e12 0%, #2a1018 52%, #120d10 100%); }
+.armour-figure::before { content: ""; position: absolute; z-index: -1; width: 58%; aspect-ratio: 1; left: 21%; top: 7%; border-radius: 50%; background: radial-gradient(circle at 32% 28%, #c76b60 0%, #7d2933 28%, #3b121b 64%, #170d12 75%); box-shadow: 0 0 65px rgba(161,46,67,.22); opacity: .8; }
+.armour-figure::after { content: ""; position: absolute; z-index: -1; inset: 0; opacity: .16; pointer-events: none; background-image: repeating-linear-gradient(0deg, transparent 0 5px, rgba(255,241,243,.09) 6px, transparent 7px 11px); mix-blend-mode: screen; }
+.armour-art { position: relative; filter: drop-shadow(0 14px 22px rgba(0,0,0,.3)); }
+.armour-links a { transition: border-color .25s ease, padding-left .25s ease, background .25s ease; }
+.armour-links a:hover { padding-left: .65rem; border-color: rgba(224,185,192,.55); background: linear-gradient(90deg, rgba(161,46,67,.11), transparent); }
+.armour-links a:focus-visible { outline: 1px solid var(--pink); outline-offset: 4px; }
+@media (max-width: 760px) {
+  .armour-layout { grid-template-columns: minmax(0,1fr); }
+  .armour-figure { max-width: 38rem; margin-inline: auto; }
+  .armour-art { max-height: none; }
+}
