@@ -138,3 +138,33 @@ h1 em, h2 em { color: var(--pink); font-weight: 400; }
   .clinical-table { min-width: 620px; }
   .clinical-table th, .clinical-table td { padding: .9rem .75rem; }
 }
+
+
+/* Mars editorial interlude — visual rhythm while the personal image set is being assembled */
+.mars-interlude { padding-top: clamp(4rem, 8vw, 7rem); padding-bottom: clamp(5rem, 10vw, 8rem); }
+.mars-interlude-heading { display: grid; grid-template-columns: 1fr 1.1fr; align-items: end; gap: 2rem; margin-bottom: 2.2rem; }
+.mars-interlude-heading .eyebrow { grid-column: 1 / -1; margin-bottom: -.7rem; }
+.mars-interlude-heading h2 { grid-column: 1 / -1; max-width: 12ch; margin: 0; font-size: clamp(2.7rem, 7vw, 6rem); line-height: .94; font-weight: 400; letter-spacing: -.055em; }
+.mars-triptych { display: grid; grid-template-columns: 1.2fr .8fr 1fr; gap: .75rem; }
+.mars-panel { min-height: clamp(260px, 36vw, 480px); position: relative; isolation: isolate; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; padding: 1.1rem; border: 1px solid var(--line); background-color: var(--burgundy); }
+.mars-panel::before, .mars-panel::after { content: ""; position: absolute; z-index: -1; inset: 0; pointer-events: none; }
+.mars-panel::after { background: linear-gradient(0deg, rgba(18,13,16,.88), transparent 54%, rgba(18,13,16,.12)); }
+.mars-panel-landscape { background: radial-gradient(ellipse at 65% 25%, #E0B9C0 0, #A85A48 8%, #742B31 20%, transparent 40%), linear-gradient(164deg, #1a1116 0 36%, #5d2429 37%, #b94b36 59%, #3B121B 60%, #120D10 100%); }
+.mars-panel-landscape::before { opacity: .65; background: repeating-linear-gradient(172deg, transparent 0 26px, rgba(255,241,243,.07) 27px 28px, transparent 29px 47px); clip-path: polygon(0 46%, 22% 38%, 37% 45%, 60% 30%, 100% 48%, 100% 100%, 0 100%); }
+.mars-panel-fire { background: radial-gradient(ellipse at 50% 64%, #F2A05B 0, #C64A32 12%, #70212A 29%, transparent 48%), linear-gradient(145deg, #1b1015, #5a1b24 50%, #120D10); }
+.mars-panel-fire::before { background: repeating-radial-gradient(ellipse at 50% 80%, transparent 0 18px, rgba(224,185,192,.12) 19px 20px, transparent 21px 34px); transform: rotate(-13deg) scale(1.5); }
+.mars-panel-metal { background: radial-gradient(ellipse at 45% 30%, rgba(224,185,192,.7), transparent 4%), linear-gradient(135deg, #2a181d, #8f2b39 30%, #32121c 54%, #a12e43 73%, #120D10); }
+.mars-panel-metal::before { inset: 10% -20%; border: 1px solid rgba(255,241,243,.28); transform: rotate(23deg); box-shadow: 0 0 0 18px rgba(18,13,16,.08), 0 0 0 38px rgba(224,185,192,.06), 0 0 0 62px rgba(18,13,16,.12); }
+.panel-label, .panel-caption { font-family: var(--sans); position: relative; z-index: 1; }
+.panel-label { color: var(--pink); font-size: .65rem; letter-spacing: .14em; text-transform: uppercase; }
+.panel-caption { max-width: 10ch; font-size: clamp(1.45rem, 2.8vw, 2.6rem); line-height: 1; letter-spacing: -.04em; }
+.hero { background-image: radial-gradient(ellipse at 80% 74%, rgba(161,46,67,.17), transparent 42%), linear-gradient(180deg, transparent 55%, rgba(59,18,27,.22)); }
+.hero::after { content: ""; position: absolute; z-index: -1; width: 72vw; height: 28vw; min-height: 220px; right: -10vw; bottom: -10vw; border-radius: 50% 50% 0 0; border-top: 1px solid rgba(224,185,192,.24); background: linear-gradient(180deg, rgba(161,46,67,.12), transparent 80%); transform: rotate(-8deg); }
+@media (max-width: 700px) {
+  .mars-interlude-heading { display: block; }
+  .mars-interlude-heading h2 { margin-top: 1.3rem; }
+  .mars-triptych { grid-template-columns: 1fr 1fr; }
+  .mars-panel { min-height: 260px; }
+  .mars-panel-landscape { grid-column: 1 / -1; min-height: 320px; }
+}
+@media (prefers-reduced-motion: reduce) { .mars-panel, .mars-panel::before, .mars-panel::after { scroll-behavior: auto; } }
