@@ -183,3 +183,15 @@ h1 em, h2 em { color: var(--pink); font-weight: 400; }
   .armour-figure { max-width: 38rem; margin-inline: auto; }
   .armour-art { max-height: none; }
 }
+
+
+/* The three Mars panels are navigational image-cards */
+.mars-panel-link { color: var(--cream, #FFF1F3); text-decoration: none; cursor: pointer; }
+.mars-panel-link:visited { color: var(--cream, #FFF1F3); }
+.mars-panel-link .panel-caption { color: #FFF1F3; }
+.panel-open { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: .7rem; border-top: 1px solid rgba(255,241,243,.35); color: #E0B9C0; font-family: var(--sans); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; }
+.mars-panel-link:hover { border-color: rgba(255,241,243,.7); transform: translateY(-3px); }
+.mars-panel-link:hover .panel-open span { transform: translate(3px,-2px); }
+.panel-open span { display: inline-block; transition: transform .2s ease; }
+.mars-panel-link:focus-visible { outline: 2px solid #E0B9C0; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { .mars-panel-link { transition: none; } }
