@@ -84,3 +84,38 @@ h1 em, h2 em { color: var(--pink); font-weight: 400; }
 }
 @media (max-width: 380px) { .site-header nav { gap: .55rem; } .site-header nav a { font-size: .56rem; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
+/* ARMOUR: symbolic, responsive SVG illustration */
+.armour-section { padding-top: clamp(5rem, 10vw, 9rem); padding-bottom: clamp(5rem, 10vw, 9rem); background: linear-gradient(180deg, var(--black), #1b0d12 55%, var(--black)); }
+.armour-heading { max-width: 55rem; margin-bottom: 3rem; }
+.armour-heading h2, .bow-copy h2 { margin: 0; font-size: clamp(3rem, 8vw, 7rem); line-height: .94; letter-spacing: -.06em; font-weight: 400; }
+.armour-heading > p:last-child, .bow-copy > p:last-child { max-width: 38rem; color: var(--muted); font-size: 1.05rem; }
+.armour-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(18rem, .8fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+.armour-figure { min-width: 0; border: 1px solid var(--line); background: radial-gradient(ellipse at 50% 40%, rgba(161,46,67,.17), transparent 65%); }
+.armour-art { display: block; width: 100%; max-height: 44rem; }
+.figure-caption { margin: 0; padding: .8rem 1rem; border-top: 1px solid var(--line); color: var(--muted); font: .65rem var(--sans); letter-spacing: .08em; text-transform: uppercase; }
+.armour-links { display: flex; flex-direction: column; }
+.armour-links a { display: grid; grid-template-columns: 2rem minmax(0,1fr) 1rem; gap: .8rem; align-items: start; padding: 1.3rem 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+.armour-links a > span:first-child { color: var(--crimson); font: .7rem var(--sans); padding-top: .2rem; }
+.armour-links strong, .armour-links small { display: block; }
+.armour-links strong { font-size: 1.1rem; font-weight: 400; }
+.armour-links small { margin-top: .25rem; color: var(--muted); font-size: .82rem; }
+.armour-links b { color: var(--pink); font-weight: 400; transition: transform .2s; }
+.armour-links a:hover strong { color: var(--pink); }
+.armour-links a:hover b { transform: translate(3px,-3px); }
+.bow-section { overflow: hidden; padding-top: clamp(5rem, 10vw, 9rem); padding-bottom: clamp(4rem, 8vw, 7rem); background: var(--burgundy); }
+.bow-copy { max-width: 55rem; }
+.bow-stage { margin-top: 2.5rem; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: linear-gradient(90deg, rgba(18,13,16,.6), transparent); }
+.bow-art { display: block; width: 100%; overflow: visible; }
+.bow-curve { transform-origin: 170px 140px; }
+.arrow-group { transform-origin: 170px 140px; }
+.bow-stage.is-drawing .arrow-group { animation: arrow-draw 1.2s cubic-bezier(.2,.7,.2,1) both; }
+.bow-stage.is-releasing .arrow-group { animation: arrow-release 1.1s cubic-bezier(.2,.7,.2,1) both; }
+.bow-stage.is-releasing .arrow-trail { animation: trail-flash 1.1s ease-out both; }
+.bow-stage.is-releasing .target-ring { animation: target-pulse 1.1s ease-out both; }
+.bow-caption { margin: 0; padding: 0 1rem 1rem; color: var(--pink); font: .68rem var(--sans); letter-spacing: .12em; text-transform: uppercase; }
+@keyframes arrow-draw { from { transform: translateX(0); } to { transform: translateX(-55px); } }
+@keyframes arrow-release { 0% { transform: translateX(-55px); } 70% { transform: translateX(475px); } 100% { transform: translateX(475px); } }
+@keyframes trail-flash { 0%,30% { opacity: 0; } 60% { opacity: .8; } 100% { opacity: 0; } }
+@keyframes target-pulse { 0%,45% { opacity: .35; transform: scale(.7); transform-origin: 700px 140px; } 70% { opacity: 1; } 100% { opacity: .6; } }
+@media (max-width: 760px) { .armour-layout { grid-template-columns: 1fr; } .armour-art { max-height: 36rem; } .bow-art { width: 150%; max-width: none; margin-left: -15%; } }
+@media (prefers-reduced-motion: reduce) { .bow-stage.is-drawing .arrow-group, .bow-stage.is-releasing .arrow-group, .bow-stage.is-releasing .arrow-trail, .bow-stage.is-releasing .target-ring { animation: none !important; } }
